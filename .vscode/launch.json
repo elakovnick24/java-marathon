@@ -1,0 +1,147 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch task2",
+            "request": "launch",
+            "mainClass": "day4.task2",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1",
+            "request": "launch",
+            "mainClass": "day3.task1",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Task5",
+            "request": "launch",
+            "mainClass": "day1.Task5",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1",
+            "request": "launch",
+            "mainClass": "day1.task1",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task2",
+            "request": "launch",
+            "mainClass": "day1.task2",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task3",
+            "request": "launch",
+            "mainClass": "day1.task3",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task4",
+            "request": "launch",
+            "mainClass": "day1.task4",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task6",
+            "request": "launch",
+            "mainClass": "day1.task6",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1(1)",
+            "request": "launch",
+            "mainClass": "day2.task1",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task2(1)",
+            "request": "launch",
+            "mainClass": "day2.task2",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task3(1)",
+            "request": "launch",
+            "mainClass": "day2.task3",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task4(1)",
+            "request": "launch",
+            "mainClass": "day2.task4",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1(2)",
+            "request": "launch",
+            "mainClass": "day3.task1",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task2(2)",
+            "request": "launch",
+            "mainClass": "day3.task2",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task3(2)",
+            "request": "launch",
+            "mainClass": "day3.task3",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1(3)",
+            "request": "launch",
+            "mainClass": "day4.task1",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task2(3)",
+            "request": "launch",
+            "mainClass": "day4.task2",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task3(3)",
+            "request": "launch",
+            "mainClass": "day4.task3",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        },
+        {
+            "type": "java",
+            "name": "Launch task4(2)",
+            "request": "launch",
+            "mainClass": "day4.task4",
+            "projectName": "JavaMarathon_fbc9ae8b"
+        }
+    ]
+}
