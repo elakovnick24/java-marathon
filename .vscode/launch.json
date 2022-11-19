@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Launch task2",
             "request": "launch",
+            "mainClass": "day5.task2",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
+            "name": "Launch task1",
+            "request": "launch",
+            "mainClass": "day5.task1",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
+            "name": "Launch task2",
+            "request": "launch",
             "mainClass": "day4.task2",
             "projectName": "JavaMarathon_72fd20fa"
         },
