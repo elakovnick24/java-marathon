@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 public class Car {
     private String model;
@@ -25,5 +25,12 @@ public class Car {
     public int getYear() {
         return year;
     }
-    
+
+    public void info() {
+        System.out.println("It's motorbike");
+    }
+
+    public int yearDifference(int inputYear) {
+        return Math.abs(inputYear - year);
+    }
 }

@@ -1,21 +1,17 @@
-package day5;
+package day6;
 
-public class Car {
+public class Motorbike {
+
     private String model;
     private String color;
     private int year;
 
-    public void setModel(String model) {
+    public Motorbike(String model, String color, int year) {
         this.model = model;
-    }
-    public void setColor(String color) {
         this.color = color;
-    }
-    public void setYear(int year) {
         this.year = year;
     }
-
-
+    
     public String getModel() {
         return model;
     }
@@ -25,5 +21,4 @@ public class Car {
     public int getYear() {
         return year;
     }
-    
 }

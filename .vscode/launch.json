@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Task3",
+            "request": "launch",
+            "mainClass": "day6.Task3",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
+            "name": "Launch Task2",
+            "request": "launch",
+            "mainClass": "day6.Task2",
+            "projectName": "JavaMarathon_72fd20fa"
+        },
+        {
+            "type": "java",
             "name": "Launch task2",
             "request": "launch",
             "mainClass": "day5.task2",
