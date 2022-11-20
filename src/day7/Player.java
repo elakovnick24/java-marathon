@@ -1,0 +1,93 @@
+package day7;
+
+import java.util.Random;
+
+public class Player {
+    private int stamina;
+    public static final int MAX_STAMINA = 100;
+    public static final int MIN_STAMINA = 0;
+    public static int countOfPlayer = 0;
+    
+    
+    public Player(int stamina) {
+        if(countOfPlayer >= 6){
+            return;
+        }
+        info();
+        this.stamina = stamina;
+    }
+
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+
+    public int getStamina() {
+        return this.stamina;
+    }
+
+
+    
+    public static int getCountOfPlayer() {
+        return countOfPlayer;
+    }
+
+    public void run(Player player) {
+        int stamina = player.getStamina();
+        if(stamina < MIN_STAMINA || stamina > MAX_STAMINA) {
+           return;
+        } else if(stamina == 0) {
+            System.out.println("Игрок уходит с поля");
+            --countOfPlayer;
+            info();
+        }
+        int decreaseStamina = stamina - 1;
+        player.setStamina(decreaseStamina);
+        
+    }
+
+    public void info() {
+        if(countOfPlayer < 6) {
+            switch(countOfPlayer) {
+                case 1:
+                System.out.println("Команды неполные. Cвободных мест на поле: 5");
+                break;
+
+                case 2:
+                System.out.println("Команды неполные. Cвободных мест на поле: 4");
+                break;
+
+                case 3:
+                System.out.println("Команды неполные. Cвободных мест на поле: 3");
+                break;
+
+                case 4:
+                System.out.println("Команды неполные. Cвободных мест на поле: 2");
+                break;
+
+                case 5:
+                System.out.println("Команды неполные. Cвободных мест на поле: 1");
+                break;
+            }
+        } else {
+            System.out.println("На поле нет свободных мест");
+        }
+        ++countOfPlayer;
+    }
+    
+    public static void main(String[] args) {
+        Random random = new Random();
+        Player player1 = new Player(random.nextInt(2,3));
+        Player player2 = new Player(random.nextInt(90,100));
+        Player player3 = new Player(random.nextInt(90,100));
+        Player player4 = new Player(random.nextInt(90,100));
+        Player player5 = new Player(random.nextInt(90,100));
+        Player player6 = new Player(random.nextInt(90,100));
+        Player player7 = new Player(random.nextInt(90,100));
+        Player player8 = new Player(random.nextInt(90,100));
+        
+        for (int i = 0; i <= MAX_STAMINA; i++) {
+            player1.run(player1);
+        }
+    }
+
+}
