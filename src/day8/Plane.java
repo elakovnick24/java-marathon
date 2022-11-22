@@ -40,7 +40,7 @@ public class Plane {
     }
 
     public void info() {
-        System.out.println("Manufacturer: " + "manufacturer" + "\n" +
+        System.out.println("Manufacturer: " + manufacturer + "\n" +
                 "Year realise: " + year + "\n" +
                 "Length: " + length + "\n" + "Weight: " + weight + "\n" +
                 "Count of fuel: " + fuel);
@@ -53,14 +53,25 @@ public class Plane {
     public StringBuilder beatyOutput(Plane airplane) {
         StringBuilder beatifyOutput = new StringBuilder();
         StringBuilder output = beatifyOutput
-                .append(airplane.manufacturer)
+                .append("Manufacturer: " + airplane.manufacturer)
                 .append(", ")
-                .append(year)
+                .append("Year realise: " + year)
                 .append(", ")
-                .append(length)
+                .append("Length: " + length)
                 .append(", ")
-                .append(weight);
+                .append("Count of fuel: " + weight);
         return output;
+    }
+
+    @Override
+    public String toString() {
+        return 
+        "Plane: " + "\n" + 
+        "manufacturer=" + manufacturer + "\n" + 
+        "year=" + year + "\n" + 
+        " length=" + length + "\n" + 
+        " weight=" + weight + "\n" + 
+        " fuel=" + fuel;
     }
 
 }
