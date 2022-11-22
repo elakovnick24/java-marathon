@@ -1,4 +1,4 @@
-package day6;
+package day8;
 
 public class Plane {
     private String manufacturer;
@@ -41,14 +41,26 @@ public class Plane {
 
     public void info() {
         System.out.println("Manufacturer: " + "manufacturer" + "\n" +
-             "Year realise: " + year + "\n" + 
-             "Length: " + length + "\n" + "Weight: " + weight + "\n" + 
-             "Count of fuel: " + fuel
-        );
+                "Year realise: " + year + "\n" +
+                "Length: " + length + "\n" + "Weight: " + weight + "\n" +
+                "Count of fuel: " + fuel);
     }
 
     public void fillUp(int n) {
         fuel += n;
-    } 
-    
+    }
+
+    public StringBuilder beatyOutput(Plane airplane) {
+        StringBuilder beatifyOutput = new StringBuilder();
+        StringBuilder output = beatifyOutput
+                .append(airplane.manufacturer)
+                .append(", ")
+                .append(year)
+                .append(", ")
+                .append(length)
+                .append(", ")
+                .append(weight);
+        return output;
+    }
+
 }

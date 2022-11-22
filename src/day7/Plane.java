@@ -59,8 +59,10 @@ public class Plane {
         System.out.println("Who has longer ???");
         if(plane1.getLength() > plane2.getLength()) {
             System.out.println("Airplane 1 has longer");
-        } else {
+        } else if (plane1.getLength() < plane2.getLength()){
             System.out.println("Airplane 2 has longer");
+        } else {
+            System.out.println("Length of airplanes equals");
         }
     }
     
