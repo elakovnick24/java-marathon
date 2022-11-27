@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Player {
     private int stamina;
+    private static int countOfPlayer = 0;
     private static final int MAX_STAMINA = 100;
     private static final int MIN_STAMINA = 0;
-    private static int countOfPlayer = 0;
     
     public Player(int stamina) {
         if(countOfPlayer >= 6){

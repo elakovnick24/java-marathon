@@ -47,7 +47,7 @@ public class Plane {
         );
     }
 
-    public void fillUp(int n) {
+    public void fillUp(int n) { 
         fuel += n;
     } 
     
