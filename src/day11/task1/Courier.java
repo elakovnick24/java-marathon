@@ -4,10 +4,11 @@ public class Courier implements Worker {
     
     private int salary;
     private boolean isPayed;
-    private Warehouse warehouse = new Warehouse();
+    private Warehouse warehouse;
     private int counterBonus = 0;
     private int counterDelivery = 0;
-
+    private static final int TARGET_COUNT_ORDERS = 10000;
+    
     public Courier(int salary, boolean isPayed, Warehouse warehouse) {
         this.salary = salary;
         this.isPayed = isPayed;
@@ -35,7 +36,7 @@ public class Courier implements Worker {
 
     @Override
     public void doWork() {
-        salary = salary + 80;
+        salary = salary + 100;
         ++counterDelivery;
         warehouse.setCountDeliveredOrders(counterDelivery);  
     }
@@ -45,11 +46,11 @@ public class Courier implements Worker {
         if(counterBonus >= 1) {
             System.out.println("Bonus was payed alredy");
         } else {
-            if(warehouse.getCountDeliveredOrders() < 10000) {
+            if(warehouse.getCountDeliveredOrders() < TARGET_COUNT_ORDERS) {
                 System.out.println("Bonus unavailable");
             }
     
-            if(warehouse.getCountDeliveredOrders() == 10000) {
+            if(warehouse.getCountDeliveredOrders() == TARGET_COUNT_ORDERS) {
                 salary += 70.000;
                 isPayed = true;
                 counterBonus++;

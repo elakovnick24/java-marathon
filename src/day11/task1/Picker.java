@@ -4,9 +4,10 @@ public class Picker implements Worker {
     
     private int salary;
     private boolean isPayed;
-    private Warehouse warehouse = new Warehouse(); 
+    private Warehouse warehouse;
     private int counterBonus = 0;
     private int counterWork = 0;
+    private static final int TARGET_COUNT_ORDERS = 10000;
 
     public Picker(int salary, boolean isPayed, Warehouse warehouse) {
         this.salary = salary;
@@ -46,11 +47,11 @@ public class Picker implements Worker {
         if(counterBonus >= 1) {
             System.out.println("Bonus was payed alredy");
         } else {
-            if(warehouse.getCountPickedOrders() < 10000) {
+            if(warehouse.getCountPickedOrders() < TARGET_COUNT_ORDERS) {
                 System.out.println("Bonus unavailable");
             }
     
-            if(warehouse.getCountPickedOrders() == 10000) {
+            if(warehouse.getCountPickedOrders() == TARGET_COUNT_ORDERS) {
                 salary += 70.000;
                 isPayed = true;
                 counterBonus++;
