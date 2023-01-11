@@ -1,47 +1,68 @@
 package day11.task2;
 
-public class Shaman extends Hero implements PhysAttack, MagicAttack, Healer {
+public class Shaman extends Hero implements MagicAttack, Healer {
+    final int MAGIC_ATTACK = 15;
+    final int PHYS_ATTACK = 10;
+    final double MAGIC_DEFENSE = 0.2;
+    final double PHYS_DEFENSE = 0.2;
     final int HEALER_SELF = 50;
-    final int HEALER_TEAMMATE = 50;
-    final double PHYS_ATTACK = 10;
-    final double MAGIC_ATTACK = 15;
-    final double MAGIC_DAMAGE = 50;
-    double magicalAttack;
+    final int HEALER_TEAMMATE = 30;
 
     public Shaman() {
-        super();
-        super.setPhysAtt(10);
-        super.getPhysAtt();
-        super.setPhysDef(0.2);
-        super.setMagicDef(0.2);
-        super.setMagicAtt(MAGIC_ATTACK);
-        super.setHealerHimSelf(HEALER_SELF);
-        super.setHealerTeamMate(HEALER_TEAMMATE);
-    }
-
-    @Override
-    public void physicalAttack(Hero hero) {
-        super.physicalAttack(hero);
+        physDef = PHYS_DEFENSE;
+        magicDef = MAGIC_DEFENSE;
+        physAtt = PHYS_ATTACK;
     }
 
     @Override
     public void magicalAttack(Hero hero) {
-        super.magicalAttack(hero);
+        double damage = MAGIC_ATTACK * (1 - hero.magicDef);
+        if (health == MIN_HEALTH) {
+            System.out.println("Hero alredy death! Don't hit the dead");
+            return;
+        }
+
+        double healthAfterDamage = hero.health - damage;
+        if (healthAfterDamage < MIN_HEALTH) {
+            hero.health = MIN_HEALTH;
+        } else {
+            hero.health -= healthAfterDamage;
+        }
+
     }
-    
+
     @Override
     public void healHimself() {
-        super.healHimself();
+        int heal = health + HEALER_SELF;
+        if (health == MAX_HEALTH) {
+            System.out.println("The hero is healthy! Don't pretend!");
+        } else if (heal > MAX_HEALTH) {
+            health = MAX_HEALTH;
+        } else {
+            health = heal;
+        }
+
     }
 
     @Override
     public void healTeammate(Hero hero) {
-        super.healTeammate(hero);
+        int healthTeammate = hero.health + HEALER_TEAMMATE;
+
+        if (hero.health == MAX_HEALTH) {
+            System.out.println("Bastard! You are healthy! Don't pretend!");
+        } else if (healthTeammate > MAX_HEALTH) {
+            hero.health = MAX_HEALTH;
+        } else {
+            hero.health = healthTeammate;
+        }
     }
 
     @Override
     public String toString() {
-        return "Shaman {health = " + getHealth() + " }";
+        return "Shaman {" +
+                "health = " +
+                health + " }";
     }
 
 }
+
