@@ -51,7 +51,7 @@ public class Courier implements Worker {
             }
     
             if(warehouse.getCountDeliveredOrders() == TARGET_COUNT_ORDERS) {
-                salary += 70.000;
+                salary += 70000;
                 isPayed = true;
                 counterBonus++;
             }
